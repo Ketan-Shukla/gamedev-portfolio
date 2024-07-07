@@ -22,11 +22,6 @@ const Item = styled.div`
   }
 `;
 
-const Description = styled.div`
-  flex: 1;
-  padding: 20px;
-`;
-
 const ImageContainer = styled.div`
   flex: 1;
   display: flex;
@@ -54,6 +49,7 @@ const ImageVideoPanel: React.FC<ImageVideoPanelProps> = ({ media }) => {
         new Promise<void>((resolve) => {
           if (item.type === 'image') {
             const img = new window.Image();
+            //@ts-ignore
             img.src = typeof item.src === 'string' ? item.src : item.src.src;
             img.onload = () => {
               loadedImages.push(img);
