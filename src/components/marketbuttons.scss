@@ -1,0 +1,17 @@
+/* styles.css */
+.market-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.market-buttons a {
+  margin-right: 10px;
+}
+
+.store-button {
+  transition: transform 0.3s ease-in-out;
+}
+
+.store-button:hover {
+  transform: scale(1.05); /* Slight moving animation on hover */
+}

@@ -28,6 +28,19 @@ import porfolioImage4 from '../images/portfolio/spotmatch.jpg';
 import porfolioImage3 from '../images/portfolio/Wordle.png';
 import profilepic from '../images/profilepicture.png';
 import testimonialImage from '../images/testimonial.webp';
+import playstore from '../images/portfolio/GooglePlay.png';
+import appstore from '../images/portfolio/AppStore.png';
+import fbplay from '../images/portfolio/fbplay.png';
+import ludoGameplay from '../images/portfolio/ludo-gameplay.jpg';
+import ludoGameplay2 from '../images/portfolio/ludo-gameplay2.jpg';
+import spotGameplay from '../images/portfolio/spotmatch-gameplay1.jpg';
+import spotGameplay2 from '../images/portfolio/spotmatch-gameplay2.jpg';
+import ninjaGameplay from '../images/portfolio/ninja-gameplay.png';
+import ninjasurvival from '../images/portfolio/ninja-survival.jpg';
+import snowsurf1 from '../images/portfolio/snowsurf-gameplay.png';
+import snowsurf2 from '../images/portfolio/snowsurf-gameplay2.png';
+
+
 import {
   About,
   ContactSection,
@@ -61,6 +74,7 @@ export const SectionId = {
   Skills: 'skills',
   Stats: 'stats',
   Testimonials: 'testimonials',
+  Projects: 'projects',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -411,3 +425,99 @@ export const socialLinks: Social[] = [
   {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/ketanshukla9/'},
   {label: 'Leetcode', Icon: LeetcodeIcon, href: 'https://leetcode.com/Ketan-Shukla/'},
 ];
+
+interface Media {
+  type: string;
+  src: string;
+}
+
+interface Project {
+  title: string;
+  description: string;
+  readMoreLink: string;
+  marketplaces: string[];
+  media: Media[];
+}
+
+export const projects: Project[] = [
+  {
+    title: "Ludo All Star",
+    description: `
+    ⦿ A real-time multiplayer mobile game with over 10 million downloads and 4.8 rating.
+    ⦿ Contribution: Led the frontend development, implemented fixes and improvements engine level code,
+    implemented gameplay and monetanization related features.
+    ⦿ Implemented features such as battlepass, innovative game modes,
+    ⦿ Reduced ANRs by 150% and crash rate by 110%, ensuring a stable player experience.
+    ⦿ Integrated SDKs for Ads, Analytics, and Authentication on Android and iOS platforms.
+    ⦿ Core game architecture, multiplayer implementation, game engine level fixes, performance optimization.
+    `,
+    readMoreLink: "https://ludo-all-star.en.uptodown.com/android",
+    marketplaces: [],
+    media: [
+      { type: "image", src: ludoGameplay2 },
+      { type: "image", src: ludoGameplay },
+      { type: "video", src: 'https://www.youtube.com/embed/J4_SkTpXsDU' }
+    ]
+  },
+  {
+    title: "Spot Match: Math Puzzle",
+    description: `
+    ⦿ Spot match is a math puzzle game of logic. Spot the right numbers to make 10 and solve puzzle board
+    ⦿ 4.0 Star and with over 3 Lakhs downloads 
+    ⦿ Contribution: Led the frontend development, implemented core gameplay, created common modules for objectpooling,
+    touch gestures, Android Notifications, Integration of rewarded video ads
+    ⦿ Implemented Analytics, SDK integration, and conducted code reviews
+    ⦿ Participated in brain storming and development of rapid prototyping of the game
+    `,
+    readMoreLink: "https://play.google.com/store/apps/details?id=com.bombayplay.spot.match.math.puzzle&hl=en_IN",
+    marketplaces: [],
+    media: [
+      { type: "image", src: spotGameplay },
+      { type: "image", src: spotGameplay2 },
+      { type: "video", src: "https://www.youtube.com/embed/I8rQPEskPzQ" }
+    ]
+  },
+  {
+    title: "Snowboard Sprint",
+    description: `
+    ⦿ A captivating 2D snowboarding game with the thrilling objective of finishing each level while performing stunts.
+    ⦿ Contribution: Developed core gameplay mechanics, designed challenging levels, and implemented unique features.
+    ⦿ Implemented features such as scoring for spins, a timer to track level completion speed, and various hazards to increase difficulty.
+    ⦿ Designed diverse jumps and boost mechanisms to enhance gameplay dynamics.
+    ⦿ Created multiple levels with increasing challenges to keep players engaged.
+    ⦿ Integrated parallax background for a visually appealing and immersive experience.
+    ⦿ Core game architecture, level design, feature implementation, performance optimization, and visual enhancement.
+`,
+    readMoreLink: "https://github.com/Ketan-Shukla/Snow-ski-surf-build",
+    marketplaces: [],
+    media: [
+      { type: "image", src: snowsurf1 },
+      { type: "image", src: snowsurf2 },
+      { type: "video", src: "https://www.loom.com/embed/6cb40cba3d1347d0b71af3af68d2fea8?sid=c4731f5a-d077-4751-93ba-02fa860f0e4c" },
+    ]
+  },
+  {
+    title: "Ninja 3d Open World Platformer",
+    description: `    
+    ⦿ A comedic 3D open-world platformer game with engaging ninja gameplay and captivating humor.
+    ⦿ Contribution: Created the this demo game for showcasing 3D games, ensuring all features and mechanics were fully functional.
+    ⦿ Implemented key features such as interaction systems, navigation fixes, and a comprehensive inventory system.
+    ⦿ Enhanced player experience by fixing critical bugs, adding a Hard Mode, and optimizing the character controller.
+    ⦿ Reduced compile errors and navigation issues, ensuring a smooth and seamless gaming experience.
+    ⦿ Core game architecture, interaction system design, bug fixes, performance optimization, and gameplay enhancement.`,
+    readMoreLink: "https://ketan-shukla.github.io/Ninja-Platformer-openworld-puzzle/",
+    marketplaces: [],
+    media: [
+      { type: "image", src: ninjasurvival },
+      { type: "image", src: ninjaGameplay },
+      { type: "video", src: "https://www.loom.com/embed/63fdc8e152af4b23aecb4b0622684d5f?sid=f73307ab-0688-47f8-86ec-9d886e4b787d" },
+    ]
+  }
+
+];
+
+export const StoreButtons = {
+  appstore: appstore,
+  playstore: playstore,
+  fbplay: fbplay,
+}
