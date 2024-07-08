@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "build": "chmod u+r+x setup.sh && ./setup.sh && ./setup.sh && yarn compile && yarn next build",
+    "build": "chmod u+r+x setup.sh && ./setup.sh && yarn compile && yarn next build",
     "clean": "rm -rf build-tsc .next",
     "compile": "yarn run -T tsc --build --verbose",
     "dev": "yarn compile && yarn next dev",
