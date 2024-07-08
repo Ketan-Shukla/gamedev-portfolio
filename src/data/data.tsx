@@ -542,7 +542,7 @@ export const projects: Project[] = [
       {type: 'image', src: ninjaGameplay},
       {
         type: 'video',
-        src: 'https://www.loom.com/embed/63fdc8e152af4b23aecb4b0622684d5f?sid=f73307ab-0688-47f8-86ec-9d886e4b787d',
+        src: 'https://www.loom.com/embed/3cbc6ba932ae401e96cac926f694a788?sid=fc6f1011-ed58-45b6-b5f4-6acaae0e6155',
       },
     ],
   },

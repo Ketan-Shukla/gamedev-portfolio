@@ -19,7 +19,7 @@ interface PortfolioProps {
   projects: Project[];
 }
 
-const ProjectList: React.FC<PortfolioProps> = ({projects}) => {
+const ProjectList: React.FC<PortfolioProps> = React.memo(({projects}) => {
   return (
     <div className="portfolio-section">
       {projects.map((project, index) => (
@@ -27,6 +27,6 @@ const ProjectList: React.FC<PortfolioProps> = ({projects}) => {
       ))}
     </div>
   );
-};
+});
 
-export default React.memo(ProjectList);
+export default ProjectList;

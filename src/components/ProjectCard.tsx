@@ -21,7 +21,7 @@ interface ProjectCardProps {
   project: Project;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
+const ProjectCard: React.FC<ProjectCardProps> = React.memo(({project}) => {
   return (
     <div className={classNames('flex flex-col md:flex-row bg-gray-100 p-4 rounded-lg mb-8')}>
       {/* // <div className={classNames( */}
@@ -40,6 +40,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
       <ImageVideoPanel media={project.media} />
     </div>
   );
-};
+});
 
-export default React.memo(ProjectCard);
+export default ProjectCard;

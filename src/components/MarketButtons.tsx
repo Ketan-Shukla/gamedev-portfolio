@@ -7,7 +7,7 @@ interface MarketButtonsProps {
   marketplaces: string[];
 }
 
-const MarketButtons: React.FC<MarketButtonsProps> = ({marketplaces}) => {
+const MarketButtons: React.FC<MarketButtonsProps> = React.memo(({marketplaces}) => {
   return (
     <div className="market-buttons mt-4">
       {marketplaces.includes('ios') && (
@@ -27,6 +27,6 @@ const MarketButtons: React.FC<MarketButtonsProps> = ({marketplaces}) => {
       )}
     </div>
   );
-};
+});
 
-export default React.memo(MarketButtons);
+export default MarketButtons;
