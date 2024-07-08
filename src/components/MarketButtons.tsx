@@ -1,49 +1,32 @@
-import React from 'react';
 import Image from 'next/image';
-import { StoreButtons } from '../data/data';
+import React from 'react';
+
+import {StoreButtons} from '../data/data';
 
 interface MarketButtonsProps {
   marketplaces: string[];
 }
 
-const MarketButtons: React.FC<MarketButtonsProps> = ({ marketplaces }) => {
+const MarketButtons: React.FC<MarketButtonsProps> = ({marketplaces}) => {
   return (
     <div className="market-buttons mt-4">
       {marketplaces.includes('ios') && (
-        <a href="ios-link" className="mr-2">
-          <Image
-            src={StoreButtons.appstore}
-            alt="iOS"
-            width={150} 
-            height={50}
-            className="store-button"
-          />
+        <a className="mr-2" href="ios-link">
+          <Image alt="iOS" className="store-button" height={50} src={StoreButtons.appstore} width={150} />
         </a>
       )}
       {marketplaces.includes('android') && (
-        <a href="android-link" className="mr-2">
-          <Image
-            src={StoreButtons.playstore}
-            alt="Android"
-            width={150}
-            height={50}
-            className="store-button"
-          />
+        <a className="mr-2" href="android-link">
+          <Image alt="Android" className="store-button" height={50} src={StoreButtons.playstore} width={150} />
         </a>
       )}
       {marketplaces.includes('facebook') && (
-        <a href="facebook-link" className="mr-2">
-          <Image
-            src={StoreButtons.fbplay}
-            alt="Facebook"
-            width={150}
-            height={50}
-            className="store-button"
-          />
+        <a className="mr-2" href="facebook-link">
+          <Image alt="Facebook" className="store-button" height={50} src={StoreButtons.fbplay} width={150} />
         </a>
       )}
     </div>
   );
 };
 
-export default MarketButtons;
+export default React.memo(MarketButtons);

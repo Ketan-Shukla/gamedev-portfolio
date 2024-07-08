@@ -1,14 +1,14 @@
 import dynamic from 'next/dynamic';
-import { FC, memo } from 'react';
+import {FC, memo} from 'react';
 
 import Page from '../components/Layout/Page';
+import ProjectList from '../components/ProjectList';
 import Contact from '../components/Sections/Contact';
 import Footer from '../components/Sections/Footer';
-import { homePageMeta, projects } from '../data/data';
-import ProjectList from '../components/ProjectList';
+import {homePageMeta, projects} from '../data/data';
 
 // eslint-disable-next-line react-memo/require-memo
-const Header = dynamic(() => import('../components/Sections/Header'), { ssr: false });
+const Header = dynamic(() => import('../components/Sections/Header'), {ssr: false});
 
 // interface Media {
 //   type: string;
@@ -24,8 +24,7 @@ const Header = dynamic(() => import('../components/Sections/Header'), { ssr: fal
 // }
 
 const ProjectPage: FC = memo(() => {
-  const { title, description } = homePageMeta;
-
+  const {title, description} = homePageMeta;
 
   return (
     <Page description={description} title={title}>

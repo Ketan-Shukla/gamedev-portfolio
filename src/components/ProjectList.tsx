@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ProjectCard from '../components/ProjectCard';
 
 interface Media {
@@ -18,7 +19,7 @@ interface PortfolioProps {
   projects: Project[];
 }
 
-const ProjectList: React.FC<PortfolioProps> = ({ projects }) => {
+const ProjectList: React.FC<PortfolioProps> = ({projects}) => {
   return (
     <div className="portfolio-section">
       {projects.map((project, index) => (
@@ -28,4 +29,4 @@ const ProjectList: React.FC<PortfolioProps> = ({ projects }) => {
   );
 };
 
-export default ProjectList;
+export default React.memo(ProjectList);

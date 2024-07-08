@@ -29,4 +29,4 @@ declare module '*.mp4' {
   export default value;
 }
 
-declare module "*.pdf" ;
+declare module '*.pdf';

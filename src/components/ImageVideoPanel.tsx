@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react';
-import { Stage, Layer, Image as KonvaImage } from 'react-konva';
+import React, {Suspense} from 'react';
+import {Image as KonvaImage, Layer, Stage} from 'react-konva';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -15,7 +15,7 @@ const Item = styled.div`
   width: calc(33.333% - 20px); /* Adjust width and subtract gap for proper spacing */
   max-width: 300px; /* Adjust based on your desired max width */
   margin-bottom: 0px; /* Add bottom margin to separate rows */
-  
+
   &:hover .image-container {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
@@ -39,14 +39,14 @@ interface ImageVideoPanelProps {
   media: Media[];
 }
 
-const ImageVideoPanel: React.FC<ImageVideoPanelProps> = ({ media }) => {
+const ImageVideoPanel: React.FC<ImageVideoPanelProps> = ({media}) => {
   const [images, setImages] = React.useState<HTMLImageElement[]>([]);
 
   React.useEffect(() => {
     const loadedImages: HTMLImageElement[] = [];
     const imagePromises = media.map(
-      (item) =>
-        new Promise<void>((resolve) => {
+      item =>
+        new Promise<void>(resolve => {
           if (item.type === 'image') {
             const img = new window.Image();
             //@ts-ignore
@@ -58,7 +58,7 @@ const ImageVideoPanel: React.FC<ImageVideoPanelProps> = ({ media }) => {
           } else {
             resolve();
           }
-        })
+        }),
     );
 
     Promise.all(imagePromises).then(() => {
@@ -75,9 +75,9 @@ const ImageVideoPanel: React.FC<ImageVideoPanelProps> = ({ media }) => {
           </Description> */}
           <ImageContainer className="image-container">
             {item.type === 'image' && images[index] && (
-              <Stage width={300} height={500}>
+              <Stage height={500} width={300}>
                 <Layer>
-                  <KonvaImage image={images[index]} width={300} height={500} />
+                  <KonvaImage height={500} image={images[index]} width={300} />
                 </Layer>
               </Stage>
             )}
@@ -85,14 +85,13 @@ const ImageVideoPanel: React.FC<ImageVideoPanelProps> = ({ media }) => {
               <section>
                 <Suspense fallback={<p>Loading video...</p>}>
                   <iframe
-                    width={300}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
                     height={500}
+                    referrerPolicy="strict-origin-when-cross-origin"
                     src={item.src}
                     title="Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  ></iframe>
+                    width={300}></iframe>
                 </Suspense>
               </section>
             )}
@@ -103,4 +102,4 @@ const ImageVideoPanel: React.FC<ImageVideoPanelProps> = ({ media }) => {
   );
 };
 
-export default ImageVideoPanel;
+export default React.memo(ImageVideoPanel);

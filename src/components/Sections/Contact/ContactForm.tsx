@@ -29,13 +29,12 @@ const ContactForm: FC = memo(() => {
     [data],
   );
 
-
   const inputClasses =
     'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-orange-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';
-    // action="https://api.web3forms.com/submit"
+  // action="https://api.web3forms.com/submit"
   return (
     <form action="https://api.web3forms.com/submit" className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST">
-      <input name="access_key" type="hidden"  value="905d4b8f-32d0-4879-b7d2-c2dc9c8db1de"></input>
+      <input name="access_key" type="hidden" value="905d4b8f-32d0-4879-b7d2-c2dc9c8db1de"></input>
       <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" />
       <input
         autoComplete="email"

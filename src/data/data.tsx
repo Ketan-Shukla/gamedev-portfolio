@@ -14,33 +14,30 @@ import LeetcodeIcon from '../components/Icon/LeetcodeIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 // import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/lake-4936249_1920.jpg'
+import heroImage from '../images/lake-4936249_1920.jpg';
 import porfolioImage7 from '../images/portfolio/3JS-demo.png';
+import appstore from '../images/portfolio/AppStore.png';
 import porfolioImage10 from '../images/portfolio/crypto-app.png';
+import fbplay from '../images/portfolio/fbplay.png';
 import porfolioImage2 from '../images/portfolio/four-word-splashscreen.webp';
+import playstore from '../images/portfolio/GooglePlay.png';
 import porfolioImage6 from '../images/portfolio/JungleSlots.png';
 import porfolioImage1 from '../images/portfolio/ludo-all-star-banner.jpg';
-import porfolioImage8 from '../images/portfolio/ninja-survival.jpg';
+import ludoGameplay from '../images/portfolio/ludo-gameplay.jpg';
+import ludoGameplay2 from '../images/portfolio/ludo-gameplay2.jpg';
+import ninjaGameplay from '../images/portfolio/ninja-gameplay.png';
+import ninjasurvival from '../images/portfolio/ninja-survival.jpg';
 import porfolioImage9 from '../images/portfolio/NinjaAdventure.png';
 import porfolioImage5 from '../images/portfolio/QuizMaster.png';
 import porfolioImage11 from '../images/portfolio/snow-ski-surfing.jpg';
+import snowsurf1 from '../images/portfolio/snowsurf-gameplay.png';
+import snowsurf2 from '../images/portfolio/snowsurf-gameplay2.png';
 import porfolioImage4 from '../images/portfolio/spotmatch.jpg';
+import spotGameplay from '../images/portfolio/spotmatch-gameplay1.jpg';
+import spotGameplay2 from '../images/portfolio/spotmatch-gameplay2.jpg';
 import porfolioImage3 from '../images/portfolio/Wordle.png';
 import profilepic from '../images/profilepicture.png';
 import testimonialImage from '../images/testimonial.webp';
-import playstore from '../images/portfolio/GooglePlay.png';
-import appstore from '../images/portfolio/AppStore.png';
-import fbplay from '../images/portfolio/fbplay.png';
-import ludoGameplay from '../images/portfolio/ludo-gameplay.jpg';
-import ludoGameplay2 from '../images/portfolio/ludo-gameplay2.jpg';
-import spotGameplay from '../images/portfolio/spotmatch-gameplay1.jpg';
-import spotGameplay2 from '../images/portfolio/spotmatch-gameplay2.jpg';
-import ninjaGameplay from '../images/portfolio/ninja-gameplay.png';
-import ninjasurvival from '../images/portfolio/ninja-survival.jpg';
-import snowsurf1 from '../images/portfolio/snowsurf-gameplay.png';
-import snowsurf2 from '../images/portfolio/snowsurf-gameplay2.png';
-
-
 import {
   About,
   ContactSection,
@@ -59,7 +56,7 @@ import {
  */
 export const homePageMeta: HomepageMeta = {
   title: 'Ketan Shukla Portfolio',
-  description: "site built to showcase my work and experience",
+  description: 'site built to showcase my work and experience',
 };
 
 /**
@@ -88,13 +85,13 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Pune based <strong className="text-stone-100">Full Stack Game Developer</strong>, currently working
-        at <strong className="text-stone-100">Bombay Play</strong> helping build hyper social, mobile-first,
-        games that you can play with your family and friends.
+        I'm a Pune based <strong className="text-stone-100">Full Stack Game Developer</strong>, currently working at{' '}
+        <strong className="text-stone-100">Bombay Play</strong> helping build hyper social, mobile-first, games that you
+        can play with your family and friends.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Gym</strong>,
-        jolting down my thoughts in my <strong className="text-stone-100">poems</strong>, or exploring wilderness of{' '}
+        In my free time time, you can catch me training in <strong className="text-stone-100">Gym</strong>, jolting down
+        my thoughts in my <strong className="text-stone-100">poems</strong>, or exploring wilderness of{' '}
         <strong className="text-stone-100">Majestic Sahyadri Ranges</strong>.
       </p>
     </>
@@ -102,10 +99,10 @@ export const heroData: Hero = {
   actions: [
     {
       href: 'resume.pdf',
-      text: "Resume",
+      text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
-      target:"resume.pdf"
+      target: 'resume.pdf',
     },
     {
       href: `#${SectionId.Contact}`,
@@ -120,17 +117,21 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: 
-  (<>
-  {/* <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg"> */}
-  I'm a passionate Software Development Engineer with a strong background in <strong className="text-stone-100"> Unity, Cocos game engine, C++ and TypeScript</strong>.
-  My experience includes leading client-side development for games using Unity, collaborating with cross-functional teams, and championing Agile/Scrum practices.
-  {/* </p> */}
-  {/* <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg"> */}
-  With a focus on creating highly performant web applications, I excel in <strong className="text-stone-100">JavaScript, React.js, Redux, and Redux Saga</strong> as well.
-  My commitment to testable and maintainable code, along with a keen eye for detail, ensures top-quality software
-  {/* </p> */}
-</>),  
+  description: (
+    <>
+      {/* <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg"> */}
+      I'm a passionate Software Development Engineer with a strong background in{' '}
+      <strong className="text-stone-100"> Unity, Cocos game engine, C++ and TypeScript</strong>. My experience includes
+      leading client-side development for games using Unity, collaborating with cross-functional teams, and championing
+      Agile/Scrum practices.
+      {/* </p> */}
+      {/* <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg"> */}
+      With a focus on creating highly performant web applications, I excel in{' '}
+      <strong className="text-stone-100">JavaScript, React.js, Redux, and Redux Saga</strong> as well. My commitment to
+      testable and maintainable code, along with a keen eye for detail, ensures top-quality software
+      {/* </p> */}
+    </>
+  ),
 
   aboutItems: [
     {label: 'Location', text: 'Pune, MH', Icon: MapIcon},
@@ -253,7 +254,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     title: 'Quiz Master 2D',
-    description: 'Simple Quiz Game Made With Unity 2021.3.17f. Demonstrates the use of Canvas, Buttons, and TextMeshPro',
+    description:
+      'Simple Quiz Game Made With Unity 2021.3.17f. Demonstrates the use of Canvas, Buttons, and TextMeshPro',
     url: 'https://ketan-shukla.github.io/QuizMaster2D-Build/',
     image: porfolioImage5,
   },
@@ -275,11 +277,12 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Ninja Survival',
     description: 'survivo.io clone game',
     url: 'https://drive.google.com/drive/folders/1c0XIxf89i5NndOSWOANiXCg-uuPa58GZ',
-    image: porfolioImage8,
+    image: ninjasurvival,
   },
   {
     title: 'Ninja Adventure',
-    description: 'Play Using WASD Keys! Game Show cases 3d terrain with collectable items fully working inventory, Traps and ester eggs',
+    description:
+      'Play Using WASD Keys! Game Show cases 3d terrain with collectable items fully working inventory, Traps and ester eggs',
     url: 'https://ketan-shukla.github.io/Ninja-Platformer-openworld-puzzle/',
     image: porfolioImage9,
   },
@@ -291,7 +294,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     title: 'Ski Slope Adventure - A 2D Mobile Skiing Game',
-    description: '"Ski Slope Adventure" is an exhilarating 2D mobile game that transports players to the thrilling world of downhill skiing. With responsive controls and heart-pounding gameplay, this game offers an immersive experience for both casual gamers and skiing enthusiasts. Players must navigate a snow-covered mountain, avoid obstacles, and strive to reach the finish line while enjoying breathtaking winter landscapes.',
+    description:
+      '"Ski Slope Adventure" is an exhilarating 2D mobile game that transports players to the thrilling world of downhill skiing. With responsive controls and heart-pounding gameplay, this game offers an immersive experience for both casual gamers and skiing enthusiasts. Players must navigate a snow-covered mountain, avoid obstacles, and strive to reach the finish line while enjoying breathtaking winter landscapes.',
     url: 'https://ketan-shukla.github.io/Snow-ski-surf-build/',
     image: porfolioImage11,
   },
@@ -305,13 +309,29 @@ export const education: TimelineItem[] = [
     date: 'Feb 2019',
     location: 'CDAC ACTS, Pashan Pune',
     title: 'PG Diploma Course',
-    content: <p>Rooted in C-DAC's extensive research and development heritage, the course curriculum, teaching materials, and instructional approach draw from the institution's distinguished legacy of designing the PARAM series of supercomputers. As a result, PG-DVLSI offers a comprehensive and industry-relevant education, empowering participants to excel in the field of VLSI design </p>,
+    content: (
+      <p>
+        Rooted in C-DAC's extensive research and development heritage, the course curriculum, teaching materials, and
+        instructional approach draw from the institution's distinguished legacy of designing the PARAM series of
+        supercomputers. As a result, PG-DVLSI offers a comprehensive and industry-relevant education, empowering
+        participants to excel in the field of VLSI design{' '}
+      </p>
+    ),
   },
   {
     date: 'June 2018',
     location: 'Sant Gadge Baba Amravati University',
     title: 'Bachelor of Engineering Electronics and Telecommunication',
-    content: <p> I've gained expertise in DSA, C++, programming languages, semiconductors, and the application of the knowledge in communication and problem-solving. The program instilled innovation, technological understanding, and a commitment to human values. It prepared me for a dynamic tech landscape, encouraging adaptability and creativity for a self-sustaining Digital India. I've honed skills through technology-focused courses, soft skill training, workshops, and insights from industry experts.</p>,
+    content: (
+      <p>
+        {' '}
+        I've gained expertise in DSA, C++, programming languages, semiconductors, and the application of the knowledge
+        in communication and problem-solving. The program instilled innovation, technological understanding, and a
+        commitment to human values. It prepared me for a dynamic tech landscape, encouraging adaptability and creativity
+        for a self-sustaining Digital India. I've honed skills through technology-focused courses, soft skill training,
+        workshops, and insights from industry experts.
+      </p>
+    ),
   },
 ];
 
@@ -322,8 +342,10 @@ export const experience: TimelineItem[] = [
     title: 'Software Development Engineer 2',
     content: (
       <div>
-        <ul>- Led game development for Daily Word Puzzle and Spot-Match using Cocos and TypeScript, C++.
-          Actively engaged in peer code reviews.</ul>
+        <ul>
+          - Led game development for Daily Word Puzzle and Spot-Match using Cocos and TypeScript, C++. Actively engaged
+          in peer code reviews.
+        </ul>
         <ul>- Contributed to the development of a new exciting game DragonTile using Unity and C#.</ul>
         <ul>- Built SDKs in C++, Java, and TypeScript to streamline cross-project processes.</ul>
         <ul>- Collaborated with product management and UX teams to ensure the best user experiences.</ul>
@@ -338,7 +360,10 @@ export const experience: TimelineItem[] = [
     content: (
       <div>
         <ul>- Worked on the development of FourWords and CricketRivals 3D game using Unity and C#.</ul>
-        <ul>- Contributed to designing and developing multiplayer board games employing C++, Cocos, and JavaScript/Typescript.</ul>
+        <ul>
+          - Contributed to designing and developing multiplayer board games employing C++, Cocos, and
+          JavaScript/Typescript.
+        </ul>
         <ul>- Built scripting tools and SDKs in C++, and Python to streamline development processes.</ul>
         <ul>- Development of Dashboards for monitoring and managing analytics data from thousands of players</ul>
       </div>
@@ -369,12 +394,14 @@ export const testimonial: TestimonialSection = {
     {
       name: 'Shyam Gupta \nTechnical Leader \nSTMicroelectronics',
       text: 'Ketan is a highly motivated and multiskilled individual. Being able to think quickly and come up with a logical solution is his strong suit. He is very much capable of delivering a presentation and explain his ideas.',
-      image: 'https://media.licdn.com/dms/image/D4D03AQHV6sKfCoF2-w/profile-displayphoto-shrink_800_800/0/1693242654376?e=1704326400&v=beta&t=3BHdQrsWav6jmbHLjmSfsO7PtrRkBwCDql8adGH6R64',
+      image:
+        'https://media.licdn.com/dms/image/D4D03AQHV6sKfCoF2-w/profile-displayphoto-shrink_800_800/0/1693242654376?e=1704326400&v=beta&t=3BHdQrsWav6jmbHLjmSfsO7PtrRkBwCDql8adGH6R64',
     },
     {
       name: 'Kaustubh Mhatre Pre-Silicon Verification Engineer at Intel Corporation',
       text: 'Ketan was my project partner. He has excellent leadership and team management skills. He actively participated in any discussion regarding project and always had a solution to any problem faced in project. He is really a go-to-guy. He also has amazing presentation skills',
-      image: 'https://media.licdn.com/dms/image/C4E03AQE_1brrpU3O1A/profile-displayphoto-shrink_800_800/0/1578933949285?e=1704326400&v=beta&t=IKNfRZIj-bolcJZ2BqaW94rdKs1Xe5ZxAFeAYO1Pq3s',
+      image:
+        'https://media.licdn.com/dms/image/C4E03AQE_1brrpU3O1A/profile-displayphoto-shrink_800_800/0/1578933949285?e=1704326400&v=beta&t=IKNfRZIj-bolcJZ2BqaW94rdKs1Xe5ZxAFeAYO1Pq3s',
     },
     // {
     //   name: 'Someone else',
@@ -441,7 +468,7 @@ interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Ludo All Star",
+    title: 'Ludo All Star',
     description: `
     ⦿ A real-time multiplayer mobile game with over 10 million downloads and 4.8 rating.
     ⦿ Contribution: Led the frontend development, implemented fixes and improvements engine level code,
@@ -451,16 +478,16 @@ export const projects: Project[] = [
     ⦿ Integrated SDKs for Ads, Analytics, and Authentication on Android and iOS platforms.
     ⦿ Core game architecture, multiplayer implementation, game engine level fixes, performance optimization.
     `,
-    readMoreLink: "https://ludo-all-star.en.uptodown.com/android",
+    readMoreLink: 'https://ludo-all-star.en.uptodown.com/android',
     marketplaces: [],
     media: [
-      { type: "image", src: ludoGameplay2 },
-      { type: "image", src: ludoGameplay },
-      { type: "video", src: 'https://www.youtube.com/embed/J4_SkTpXsDU' }
-    ]
+      {type: 'image', src: ludoGameplay2},
+      {type: 'image', src: ludoGameplay},
+      {type: 'video', src: 'https://www.youtube.com/embed/J4_SkTpXsDU'},
+    ],
   },
   {
-    title: "Spot Match: Math Puzzle",
+    title: 'Spot Match: Math Puzzle',
     description: `
     ⦿ Spot match is a math puzzle game of logic. Spot the right numbers to make 10 and solve puzzle board
     ⦿ 4.0 Star and with over 3 Lakhs downloads 
@@ -469,16 +496,16 @@ export const projects: Project[] = [
     ⦿ Implemented Analytics, SDK integration, and conducted code reviews
     ⦿ Participated in brain storming and development of rapid prototyping of the game
     `,
-    readMoreLink: "https://play.google.com/store/apps/details?id=com.bombayplay.spot.match.math.puzzle&hl=en_IN",
+    readMoreLink: 'https://play.google.com/store/apps/details?id=com.bombayplay.spot.match.math.puzzle&hl=en_IN',
     marketplaces: [],
     media: [
-      { type: "image", src: spotGameplay },
-      { type: "image", src: spotGameplay2 },
-      { type: "video", src: "https://www.youtube.com/embed/I8rQPEskPzQ" }
-    ]
+      {type: 'image', src: spotGameplay},
+      {type: 'image', src: spotGameplay2},
+      {type: 'video', src: 'https://www.youtube.com/embed/I8rQPEskPzQ'},
+    ],
   },
   {
-    title: "Snowboard Sprint",
+    title: 'Snowboard Sprint',
     description: `
     ⦿ A captivating 2D snowboarding game with the thrilling objective of finishing each level while performing stunts.
     ⦿ Contribution: Developed core gameplay mechanics, designed challenging levels, and implemented unique features.
@@ -488,16 +515,19 @@ export const projects: Project[] = [
     ⦿ Integrated parallax background for a visually appealing and immersive experience.
     ⦿ Core game architecture, level design, feature implementation, performance optimization, and visual enhancement.
 `,
-    readMoreLink: "https://github.com/Ketan-Shukla/Snow-ski-surf-build",
+    readMoreLink: 'https://github.com/Ketan-Shukla/Snow-ski-surf-build',
     marketplaces: [],
     media: [
-      { type: "image", src: snowsurf1 },
-      { type: "image", src: snowsurf2 },
-      { type: "video", src: "https://www.loom.com/embed/6cb40cba3d1347d0b71af3af68d2fea8?sid=c4731f5a-d077-4751-93ba-02fa860f0e4c" },
-    ]
+      {type: 'image', src: snowsurf1},
+      {type: 'image', src: snowsurf2},
+      {
+        type: 'video',
+        src: 'https://www.loom.com/embed/6cb40cba3d1347d0b71af3af68d2fea8?sid=c4731f5a-d077-4751-93ba-02fa860f0e4c',
+      },
+    ],
   },
   {
-    title: "Ninja 3d Open World Platformer",
+    title: 'Ninja 3d Open World Platformer',
     description: `    
     ⦿ A comedic 3D open-world platformer game with engaging ninja gameplay and captivating humor.
     ⦿ Contribution: Created the this demo game for showcasing 3D games, ensuring all features and mechanics were fully functional.
@@ -505,19 +535,21 @@ export const projects: Project[] = [
     ⦿ Enhanced player experience by fixing critical bugs, adding a Hard Mode, and optimizing the character controller.
     ⦿ Reduced compile errors and navigation issues, ensuring a smooth and seamless gaming experience.
     ⦿ Core game architecture, interaction system design, bug fixes, performance optimization, and gameplay enhancement.`,
-    readMoreLink: "https://ketan-shukla.github.io/Ninja-Platformer-openworld-puzzle/",
+    readMoreLink: 'https://ketan-shukla.github.io/Ninja-Platformer-openworld-puzzle/',
     marketplaces: [],
     media: [
-      { type: "image", src: ninjasurvival },
-      { type: "image", src: ninjaGameplay },
-      { type: "video", src: "https://www.loom.com/embed/63fdc8e152af4b23aecb4b0622684d5f?sid=f73307ab-0688-47f8-86ec-9d886e4b787d" },
-    ]
-  }
-
+      {type: 'image', src: ninjasurvival},
+      {type: 'image', src: ninjaGameplay},
+      {
+        type: 'video',
+        src: 'https://www.loom.com/embed/63fdc8e152af4b23aecb4b0622684d5f?sid=f73307ab-0688-47f8-86ec-9d886e4b787d',
+      },
+    ],
+  },
 ];
 
 export const StoreButtons = {
   appstore: appstore,
   playstore: playstore,
   fbplay: fbplay,
-}
+};

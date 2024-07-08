@@ -1,4 +1,5 @@
 import {useEffect} from 'react';
+
 import {headerID} from '../components/Sections/Header';
 import {SectionId} from '../data/data';
 
