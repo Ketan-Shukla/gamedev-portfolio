@@ -85,8 +85,8 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Pune based <strong className="text-stone-100">Full Stack Game Developer</strong>, currently working at{' '}
-        <strong className="text-stone-100">Bombay Play</strong> helping build hyper social, mobile-first, games that you
+        I'm a Bengaluru based <strong className="text-stone-100">Full Stack Game Developer</strong>, currently working at{' '}
+        <strong className="text-stone-100">Zynga Games India</strong> helping build hyper social, mobile-first, games that you
         can play with your family and friends.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
@@ -134,8 +134,7 @@ export const aboutData: About = {
   ),
 
   aboutItems: [
-    {label: 'Location', text: 'Pune, MH', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
+    {label: 'Location', text: 'Bengaluru, KA', Icon: MapIcon},
     {label: 'Nationality', text: 'Indian', Icon: FlagIcon},
     {label: 'Interests', text: 'Games, Gym, Trekking', Icon: SparklesIcon},
     {label: 'Study', text: 'CDAC ACTS Pune', Icon: AcademicCapIcon},
